@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "E:\\MinGW\\mingw64\\include\\**",
+                "E:\\MinGW\\mingw64\\x86_64-w64-mingw32\\include\\**",
+
+                "E:\\opencv\\build\\install\\include",
+                "E:\\opencv\\build\\install\\include\\opencv2",
+                "E:\\opencv\\build\\install\\x64\\mingw\\lib"
+            ],
+
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "E:\\MinGW\\mingw64\\bin\\g++.exe",
+            "cStandard": "c99",
+            "cppStandard": "gnu++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
