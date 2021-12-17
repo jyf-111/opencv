@@ -5,7 +5,7 @@ using namespace cv;
 
 int main()
 {
-	Mat img = imread("D:\\Pictures\\Saved Pictures\\1.jpg");
+	Mat img = imread("1.jpg");
 
 	int h = img.rows;
 	int w = img.cols;
