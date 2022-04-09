@@ -12,7 +12,7 @@
         //YuSLi: 下面这一行是原先的，用于做一下备份。
         "c": "cd $dir && gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=UTF-8 && &'$dir$fileNameWithoutExt'",
         //"cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c++17 -fexec-charset=UTF-8 && &'$dir$fileNameWithoutExt'"
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -I E:\\opencv\\build\\install\\include -I E:\\opencv\\build\\install\\include\\opencv2 -L E:\\opencv\\build\\install\\x64\\mingw\\lib -lopencv_world453 && $dir$fileNameWithoutExt "
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt "
 
         // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=GBK && $dir$fileNameWithoutExt",
         // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc -std=c++17 -fexec-charset=GBK && $dir$fileNameWithoutExt"
