@@ -4,7 +4,7 @@ using namespace cv;
 using namespace std;
 int main()
 {
-    VideoCapture v("E:\\vscode\\opencv\\DCS001.flv");
+    VideoCapture v("opencv/DCS.flv");
     Mat frame;
     while(1){
         waitKey(25);

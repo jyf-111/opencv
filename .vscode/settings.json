@@ -3,20 +3,12 @@
     "editor.formatOnType": true,  // 输入分号(C/C++的语句结束标识)后自动格式化当前这一行的代码
     "editor.suggest.snippetsPreventQuickSuggestions": false, // clangd的snippets有很多的跳转点，不用这个就必须手动触发Intellisense了
     "editor.acceptSuggestionOnEnter": "on", // 我个人的习惯，按回车时一定是真正的换行，只有tab才会接受Intellisense
-    // "editor.snippetSuggestions": "top", // （可选）snippets显示在补全列表顶端，默认是inline
-    "c-cpp-compile-run.run-in-external-terminal": true,//是否为外置控制台输出
+    "editor.snippetSuggestions": "top", // （可选）snippets显示在补全列表顶端，默认是inline
     "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入
     "code-runner.executorMap": {
-        //YuSLi: 下面这一行用于编译多文件，把'$filename'改成*.c即可。同理，C++也可以用这种方式进行多文件编译
-        //"c": "cd $dir && gcc *.c -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=GBK && &'$dir$fileNameWithoutExt'",
-        //YuSLi: 下面这一行是原先的，用于做一下备份。
         "c": "cd $dir && gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=UTF-8 && &'$dir$fileNameWithoutExt'",
-        //"cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c++17 -fexec-charset=UTF-8 && &'$dir$fileNameWithoutExt'"
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt "
-
-        // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=GBK && $dir$fileNameWithoutExt",
-        // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc -std=c++17 -fexec-charset=GBK && $dir$fileNameWithoutExt"
-    }, // 右键run code时运行的命令；未注释的仅适用于PowerShell（Win10默认），文件名中有空格也可以编译运行；注释掉的适用于cmd（win7默认），PS和bash也能用，但文件名中有空格时无法运行
+        "cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c++17 -fexec-charset=UTF-8 && &'$dir$fileNameWithoutExt'"
+    }, 
     "code-runner.saveFileBeforeRun": true, // run code前保存
     "code-runner.preserveFocus": false,     // 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false
     "code-runner.clearPreviousOutput": false, // 每次run code前清空属于code runner的终端消息，默认false
@@ -24,83 +16,6 @@
 
     "C_Cpp.clang_format_sortIncludes": true,
     "files.associations": {
-        "stdio.h": "c",
-        "future": "cpp",
-        "iostream": "cpp",
-        "stdexcept": "cpp",
-        "chrono": "cpp",
-        "array": "cpp",
-        "atomic": "cpp",
-        "*.tcc": "cpp",
-        "cctype": "cpp",
-        "clocale": "cpp",
-        "cmath": "cpp",
-        "condition_variable": "cpp",
-        "cstdarg": "cpp",
-        "cstddef": "cpp",
-        "cstdint": "cpp",
-        "cstdio": "cpp",
-        "cstdlib": "cpp",
-        "ctime": "cpp",
-        "cwchar": "cpp",
-        "cwctype": "cpp",
-        "deque": "cpp",
-        "list": "cpp",
-        "unordered_map": "cpp",
-        "vector": "cpp",
-        "exception": "cpp",
-        "algorithm": "cpp",
-        "memory": "cpp",
-        "memory_resource": "cpp",
-        "optional": "cpp",
-        "ratio": "cpp",
-        "string": "cpp",
-        "string_view": "cpp",
-        "system_error": "cpp",
-        "tuple": "cpp",
-        "type_traits": "cpp",
-        "utility": "cpp",
-        "fstream": "cpp",
-        "initializer_list": "cpp",
-        "iosfwd": "cpp",
-        "istream": "cpp",
-        "limits": "cpp",
-        "mutex": "cpp",
-        "new": "cpp",
-        "ostream": "cpp",
-        "sstream": "cpp",
-        "streambuf": "cpp",
-        "thread": "cpp",
-        "typeinfo": "cpp",
-        "any": "cpp",
-        "strstream": "cpp",
-        "bitset": "cpp",
-        "cfenv": "cpp",
-        "charconv": "cpp",
-        "cinttypes": "cpp",
-        "codecvt": "cpp",
-        "complex": "cpp",
-        "csetjmp": "cpp",
-        "csignal": "cpp",
-        "cstring": "cpp",
-        "forward_list": "cpp",
-        "unordered_set": "cpp",
-        "functional": "cpp",
-        "iterator": "cpp",
-        "map": "cpp",
-        "numeric": "cpp",
-        "random": "cpp",
-        "regex": "cpp",
-        "set": "cpp",
-        "source_location": "cpp",
-        "rope": "cpp",
-        "slist": "cpp",
-        "iomanip": "cpp",
-        "scoped_allocator": "cpp",
-        "shared_mutex": "cpp",
-        "typeindex": "cpp",
-        "valarray": "cpp",
-        "variant": "cpp"
     }, // 格式化时调整include的顺序（按字母排序）
 }
 

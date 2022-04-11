@@ -5,9 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "~\\scoop\\apps\\mingw-winlibs\\current\\include\\**",
-                "~\\scoop\\apps\\mingw-winlibs\\current\\x86_64-w64-mingw32\\include",
-                "${vcpkgRoot}/x64-windows/include",
-                "~/.conan/data/**"
+                "~\\scoop\\apps\\mingw-winlibs\\current\\x86_64-w64-mingw32\\include"
             ],
             "browse": {
                 "path": [
